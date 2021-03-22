@@ -1,0 +1,53 @@
+﻿@page
+@model FizzBuzzWeb.Pages.Ostatnio_SzukaneModel
+@{
+    ViewData["Title"] = "Dane zapisane w sesji";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+@if (Model.Number != null)
+{
+    bool divisible3 = false;
+    bool divisible5 = false;
+
+    @if (Model.Number.Liczba % 3 == 0)
+    {
+        divisible3 = true;
+
+    }
+    @if (Model.Number.Liczba % 5 == 0)
+    {
+        divisible5 = true;
+    }
+    @if (divisible3 && divisible5)
+    {
+        <p>
+            @Html.DisplayNameFor(model => Model.Number.Liczba): Otrzymano FizzBuzz <br />
+            Data : @DateTime.Now
+        </p>
+    }
+    else if (divisible3)
+    {
+        <p>
+            @Html.DisplayNameFor(model => Model.Number.Liczba): Otrzymano Fizz <br />
+            Data : @DateTime.Now
+        </p>
+    }
+    else if (divisible5)
+    {
+        <p>
+            @Html.DisplayNameFor(model => Model.Number.Liczba): Otrzymano Buzz <br />
+            Data : @DateTime.Now
+        </p>
+    }
+    else
+    {
+        <p>
+            @Html.DisplayNameFor(model => Model.Number.Liczba): Liczba @Model.Number.Liczba nie spełnia kryteriów FizzBuzz <br />
+            Data : @DateTime.Now
+        </p>
+    }
+}
+

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-using FizzBuzzWeb.Pages.Models;
+using FizzBuzzWeb.Models;
 
 namespace FizzBuzzWeb.Pages
 {

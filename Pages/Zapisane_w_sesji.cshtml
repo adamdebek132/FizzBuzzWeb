@@ -1,0 +1,17 @@
+﻿@page
+@model FizzBuzzWeb.Pages.Zapisane_w_sesjiModel
+@{
+    ViewData["Title"] = "Ostatnio szukane";
+}
+<h1>@ViewData["Title"]</h1>
+
+@foreach (var item in Model.Numbers)
+{
+    <p>
+        @Html.DisplayFor(modelItem => item.Liczba)
+        @Html.DisplayFor(modelItem => item.Wynik)
+        @Html.DisplayFor(modelItem => item.Data)
+
+        <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+    </p>
+}

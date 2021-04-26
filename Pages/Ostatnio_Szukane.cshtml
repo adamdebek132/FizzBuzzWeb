@@ -25,28 +25,28 @@
     {
         <p>
             @Html.DisplayNameFor(model => Model.Number.Liczba): Otrzymano FizzBuzz <br />
-            Data : @DateTime.Now
+            Data : @Model.Number.Data
         </p>
     }
     else if (divisible3)
     {
         <p>
             @Html.DisplayNameFor(model => Model.Number.Liczba): Otrzymano Fizz <br />
-            Data : @DateTime.Now
+            Data : @Model.Number.Data
         </p>
     }
     else if (divisible5)
     {
         <p>
             @Html.DisplayNameFor(model => Model.Number.Liczba): Otrzymano Buzz <br />
-            Data : @DateTime.Now
+            Data : @Model.Number.Data
         </p>
     }
     else
     {
         <p>
             @Html.DisplayNameFor(model => Model.Number.Liczba): Liczba @Model.Number.Liczba nie spełnia kryteriów FizzBuzz <br />
-            Data : @DateTime.Now
+            Data : @Model.Number.Data
         </p>
     }
 }
